@@ -1,12 +1,12 @@
-# Project Template
-A template to start new projects with.
+# Bash
+This project aims to deploy a container with bash access on to an OpenShift cluster so it can be modified for development purposes.
 
 Prerequisites
 -------------
 1. install Docker
 1. install Docker Compose
 1. install Git
-1. clone repository: `git clone --recursive https://github.com/zhao-lin-li/project_template_with_containers.git`
+1. clone repository: `git clone --recursive https://github.com/zhao-li-us/bash.git`
 
 Getting Started
 ---------------
