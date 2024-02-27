@@ -1,5 +1,5 @@
 name: publish_continer_image
-run-name: Publishing bash container image
+run-name: Publishing bash container imagee
 on: [push]
 jobs:
   build_image:
