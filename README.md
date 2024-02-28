@@ -13,6 +13,12 @@ Getting Started
 1. run bootstrap.sh: `./bootstrap.sh`
 1. start service: `docker compose up`
 
+Deploying
+---------
+To Use Development Container on OpenShift:
+
+    $ oc new-app ghcr.io/zhao-li-us/bash:main~https://github.com/zhao-li-us/bash.git --strategy=docker
+
 Testing
 -------
 To test the application:
