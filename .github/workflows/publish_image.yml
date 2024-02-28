@@ -1,9 +1,27 @@
-name: publish_continer_image
+name: publish_container_image
 run-name: Publishing bash container image
 on: [push]
+env:
+  REGISTRY: ghcr.io
 jobs:
-  build_image:
+  build_and_publish_image:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "working"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Extract Meta Information for Docker Image
+        uses: docker/metadata-action@v5
+        id: meta
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and Push Image to GitHub Container Registry
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ github.repository }}:${{ steps.meta.outputs.tags }}
