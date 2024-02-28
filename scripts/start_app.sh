@@ -2,5 +2,5 @@
 
 # This script starts the application
 
-echo "starting"
+echo "sleeping forever..."
 sleep infinity
