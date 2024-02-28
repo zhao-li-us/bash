@@ -19,6 +19,12 @@ To Use Development Container on OpenShift:
 
     $ oc new-app ghcr.io/zhao-li-us/bash:main~https://github.com/zhao-li-us/bash.git --strategy=docker
 
+Cleaning Up
+-----------
+To remove auto-generated resources:
+
+    $ oc delete all --selector app=bash
+
 Testing
 -------
 To test the application:
