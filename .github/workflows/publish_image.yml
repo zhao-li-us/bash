@@ -23,5 +23,5 @@ jobs:
       - name: Build and Push Image to GitHub Container Registry
         uses: docker/build-push-action@v5
         with:
-          push: true
+          #push: true
           tags: ${{ env.REGISTRY }}/${{ github.repository }}:${{ steps.meta.outputs.tags }}
