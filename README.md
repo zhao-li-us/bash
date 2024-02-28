@@ -18,8 +18,6 @@ Deploying
 To Use Development Container on OpenShift:
 
     $ oc new-app https://github.com/zhao-li-us/bash.git --strategy=docker
-    or
-    $ oc new-app ghcr.io/zhao-li-us/bash:main~https://github.com/zhao-li-us/bash.git --strategy=docker # this might be unnecessary
 
 Cleaning Up
 -----------
