@@ -1,4 +1,4 @@
-name: publish_continer_image
+name: publish_container_image
 run-name: Publishing bash container image
 on: [push]
 env:
