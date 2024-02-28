@@ -18,8 +18,8 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo ${{ steps.meta.outputs.tags }}
-      - run: echo ${{ steps.meta.outputs.labels }}
+      - run: echo "${{ steps.meta.outputs.tags }}"
+      - run: echo "${{ steps.meta.outputs.labels }}"
       - name: Build and Push Image to GitHub Container Registry
         uses: docker/build-push-action@v5
         with:
