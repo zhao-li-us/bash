@@ -8,6 +8,3 @@ RUN scripts/install_dependencies.sh
 COPY . ${APP_ROOT_CONTAINER}
 
 CMD scripts/start_app.sh
-
-FROM development as builder
-RUN scripts/build_app.sh
